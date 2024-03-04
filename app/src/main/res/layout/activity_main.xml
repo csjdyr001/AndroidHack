@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<com.google.android.material.appbar.AppBarLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+			<androidx.appcompat.widget.Toolbar
+				android:id="@+id/toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+		</com.google.android.material.appbar.AppBarLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="红外功能部分:"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="红外信号接收:"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="接收一次"
+			android:id="@+id/get_freqs_button"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="红外信号接收数据:"
+			android:id="@+id/freqs_text"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="发射红外信号:"
+			android:layout_marginTop="20dp"/>
+
+		<com.alex.textview.view.LinkTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="输入要发射的红外编码(各种家用电器的红外编码可以在 http://www.remotecentral.com/cgi-bin/codes/ 找到):"
+			android:id="@+id/textView1"/>
+
+		<EditText
+			android:layout_width="match_parent"
+			android:inputType="textMultiLine"
+			android:layout_height="60dp"
+			android:ems="10"
+			android:text="0000 006d 0022 0002 0156 00aa 0016 0016 0016 0016 0016 003f 0016 003f 0016 0016 0016 003f 0016 0016 0016 003f 0016 003f 0016 003f 0016 0016 0016 0016 0016 003f 0016 0016 0016 003f 0016 0016 0016 0016 0016 003f 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 003f 0016 0016 0016 003f 0016 003f 0016 003f 0016 003f 0016 003f 0016 003f 0016 05e9 0156 0055 0016 0e3c"
+			android:id="@+id/infraredCode"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="发射"
+			android:id="@+id/send1"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="使用音频发射红外"
+			android:id="@+id/send2"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="NFC功能部分:"
+			android:layout_marginTop="20dp"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="扫描NFC"
+			android:id="@+id/readNFC"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="停止扫描NFC"
+			android:id="@+id/stopNFC"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="NFC读取到的数据:"
+			android:id="@+id/NFCtext"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="蓝牙功能部分:"
+			android:layout_marginTop="20dp"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="向附近的ios设备发送一次弹窗攻击"
+			android:id="@+id/iosDialogAttack"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="向附近的Android设备发送一次弹窗攻击"
+			android:id="@+id/androidDialogAttack"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="向附近的Windows设备发送一次弹窗攻击"
+			android:id="@+id/windowsDialogAttack"/>
+
+	</LinearLayout>
+
+</ScrollView>
+

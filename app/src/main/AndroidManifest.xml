@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cfks.androidhack">
+
+    <!-- 发射红外线 -->
+    <uses-permission android:name="android.permission.TRANSMIT_IR"/>
+
+    <!-- 控制近距离通信 -->
+    <uses-permission android:name="android.permission.NFC"/>
+
+    <!-- 与蓝牙设备配对 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <!-- 访问蓝牙设置 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!-- BLUETOOTH_ADVERTISE -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+
+    <!-- BLUETOOTH_CONNECT -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+
+    <!-- 访问确切位置信息（使用 GPS 和网络进行定位） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="true"
+        android:name=".GlobalApplication">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+			android:windowSoftInputMode="adjustUnspecified|stateHidden">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="4.0"/>
+
+        <activity android:name=".GlobalApplication$CrashActivity"/>
+
+    </application>
+
+</manifest>
